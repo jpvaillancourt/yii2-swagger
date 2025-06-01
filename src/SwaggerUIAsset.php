@@ -18,9 +18,6 @@ use yii\web\AssetBundle;
  */
 class SwaggerUIAsset extends AssetBundle
 {
-    public $sourcePath = '@webroot/appAssets/swagger-ui';
-    public $baseUrl = $_ENV['APP_ASSETS_BASE_URL'] . '/swagger-ui';
-
     public $js = [
         'swagger-ui-bundle.js',
         'swagger-ui-standalone-preset.js',
@@ -31,4 +28,9 @@ class SwaggerUIAsset extends AssetBundle
     ];
 
     public $depends = [];
+
+    public function init() {
+        $this->basePath = '@webroot/appAssets/swagger-ui';
+        $this->baseUrl = $_ENV['APP_ASSETS_BASE_URL'] . '/swagger-ui';
+    }
 }
