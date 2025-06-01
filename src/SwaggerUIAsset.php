@@ -21,6 +21,7 @@ class SwaggerUIAsset extends AssetBundle
     public $js = [
         'swagger-ui-bundle.js',
         'swagger-ui-standalone-preset.js',
+        'custom.js',
     ];
 
     public $css = [
